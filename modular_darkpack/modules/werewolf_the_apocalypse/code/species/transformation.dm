@@ -108,7 +108,7 @@
 	animate(owner, transform = ntransform, color = "#FFFFFF", time = time_taken * 0.1)
 
 	// edited hacky fix to unrotate the old form and then re-rotate the new one, TRAIT_NO_LYING_ANGLE forms never rotate and we need to cover more than homid
-	if(owner.lying_angle)
+	if(GET_LYING_ANGLE(owner))
 		var/previous_angle = owner.set_lying_angle(0)
 		owner.set_species(form_to_transform)
 		owner.set_lying_angle(previous_angle)
